@@ -1,0 +1,137 @@
+.project{
+    width: 100%;
+    height: 100%;
+    background: black;
+    border: red;
+    border-radius: 30px 30px 0px 0px;
+    position: relative;
+    position: sticky;
+    top: 0;
+}
+.discription{
+    width: 100%;
+    height: 25%;
+    background: rgb(30, 30, 30);
+    border-bottom:white 1px solid;
+    position: relative;
+}
+.discription p{
+    margin: 0;
+    bottom: 0px;
+    margin-left: 10rem;
+    font-size: 10vh;
+    display: flex;
+    /* color: white; */
+    /* border: blue solid; */
+    position: absolute;
+}
+.projects{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.project-1{
+    width: 70%;
+    height: 100%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.baat-cheet{
+    width: 40%;
+    height: 70%;
+    background: rgb(36, 36, 36);
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.baat-cheet:hover{
+    scale: 1.2;
+}
+.project-2{
+    width: 30%;
+    height: 100%;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.blog-app{
+    width: 40%;
+    height: 70%;
+    background: white;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.blog-app:hover{
+   scale: 1.2;
+}
+.project-name{
+    display: flex;
+    position: absolute;
+    overflow: hidden;
+    /* background: red; */
+    /* border: red solid; */
+}
+.project-name h1{
+    margin: 0;
+    color: rgb(0, 172, 0);
+    font-size: 60px;
+    transform: translateY(100%);
+}
+.mini-project{
+    width:30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    color:black;
+    border-radius: 20px;
+    background: white;
+}
+@media screen and (max-width: 700px) {
+    .discription{
+    height: 15%;
+    }
+    .discription p{
+        margin: 0;
+        bottom: 0px;
+        margin-left: 2rem;
+        font-size: 5vh;
+        display: flex;
+        /* color: white; */
+        /* border: blue solid; */
+        position: absolute;
+    }
+    .projects{
+        width: 100%;
+        height: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .project-1{
+        width: 70%;
+        height: 100%;
+        background: transparent;
+        display: inline-block;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .baat-cheet{
+        margin-top: 20px;
+        width: 90%;
+        height: 50%;
+    }
+    .blog-app{
+        margin-top: 20px;
+        width: 90%;
+        height: 50%;
+    }
+    
+}

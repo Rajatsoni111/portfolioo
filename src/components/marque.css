@@ -1,0 +1,27 @@
+.marque {
+    width: 100%;
+    height: 35%;
+    background: rgb(91, 2, 2);
+    border-radius: 30px 30px 0px 0px;
+    display: flex;
+    align-items: center;
+    /* overflow: hidden; */
+}
+
+.marque-1 {
+    display: flex;
+    align-items: center;
+    border: none;
+    border-top: white 1px solid;
+    border-bottom: white 1px solid;
+    gap: 4.5rem;
+    /* overflow-wrap: break-word; */
+    /* text-wrap: wrap; */
+    overflow:hidden;
+}
+
+.marque-tags {
+    margin: 0;
+    font-size: 130px;
+    color: white;
+}

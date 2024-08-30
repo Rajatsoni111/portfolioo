@@ -1,24 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
+import "./index.css"
+import LocomotiveScroll from 'locomotive-scroll';
+import Cyl from './components/cyl';
+import Firstpage from './components/firstpage';
+import Navbar from './components/navbar';
+import Marquee from './components/marquee';
+import About from './components/about';
+import Eyes from './components/eyes';
+import Project from './components/project';
+import Skills from './components/skills';
+import Footer from './components/footer';
 
 function App() {
+  
+  const locomotiveScroll = new LocomotiveScroll();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+     <Navbar/>
+      <Firstpage/>
+      <Marquee/>
+      <About/>
+      <Eyes/>
+      <Project/>
+      <Skills/>
+      <Footer/>
+    </>
   );
 }
 

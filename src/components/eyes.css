@@ -1,0 +1,67 @@
+.eyes-div{
+    width:100%;
+    height: 80%;
+    /* border: blue solid; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: rgb(164, 164, 164); */
+    background: rgb(91, 2, 2);
+    /* z-index: -2; */
+    overflow: hidden;
+}
+.eye{
+    width: 100%;
+    height: 100%;
+    /* height: fit-content; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    /* margin-top: 5%; */
+    background: rgb(91, 2, 2);
+}
+.eye-boll{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.eye-cir1{
+    width: 30vh;
+    height: 30vh;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 30px rgb(38, 38, 38);
+}
+.eye-cir2{
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    background: black;
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.eye-line{
+    width: 100%;
+    height: fit-content;
+    /* background: red; */
+    /* position: absolute; */
+}
+.eye-cir3{
+    width: 3vh;
+    height: 3vh;
+    border-radius: 50%;
+    background: white;
+}
+@media screen and (max-width: 700px) {
+    .eyes-div{
+        display: none;
+    }
+}
