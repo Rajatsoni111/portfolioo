@@ -11,12 +11,15 @@ import Eyes from './components/eyes';
 import Project from './components/project';
 import Skills from './components/skills';
 import Footer from './components/footer';
+import FullAbout from './components/fullAbout';
+import { BrowserRouter, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
 function App() {
-  
   const locomotiveScroll = new LocomotiveScroll();
   return (
+    
     <>
+    <BrowserRouter>
      <Navbar/>
       <Firstpage/>
       <Marquee/>
@@ -25,7 +28,19 @@ function App() {
       <Project/>
       <Skills/>
       <Footer/>
-    </>
+      </BrowserRouter>
+      {/* <FullAbout/> */}
+
+      <Router>
+        <Routes>
+          <Route path='/about' element={<About/>}/>
+          <Route path='/contact' element={<Skills/>}/>
+          <Route path='/projects' element={<Project/>}/>
+          {/* <Route path='/fullAbout' element={<FullAbout/>}/> */}
+        </Routes>
+      </Router>
+      
+      </>
   );
 }
 

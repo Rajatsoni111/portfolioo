@@ -5,18 +5,20 @@ import { FaGithub , FaLinkedinIn} from "react-icons/fa6";
 import { LuExternalLink } from "react-icons/lu";
 import { color } from 'framer-motion';
 import gsap from 'gsap';
+import { Link, NavLink } from 'react-router-dom';
 
 function About() {
 
     useEffect(()=>{
         gsap.to(".tag-name",{
             y:0,
-            stagger:0.2,
+            stagger:0.5,
             duration:1,
             scrollTrigger:{
         trigger:".tag",
         start:"top 80%",
-        end:"bottom 80%"
+        end:"bottom 80%",
+        scrub:true
     }
         })
     })
@@ -35,10 +37,13 @@ function About() {
                     <p className='text-2xl mt-10 ' id='detail'>Hello, I'm Front end developer or Motivated web designer with a passion for crafting beautiful, user-friendly websites. Skilled in HTML, CSS, JavaScript, and design tools (Photoshop, Sketch). Eager to contribute to impactful projects and grow my design career.</p>
                     <div className='icons flex gap-10 justify-center ml-[10rem] scale-150 mt-10'>
                        <a href="https://www.instagram.com/rajat__soni7"><FaInstagram /></a>
-                       <a href="https://www.linkedin.com/in/rajat-soni7205/"><FaGithub/></a>
-                       <a href="https://github.com/Rajatsoni111"><FaLinkedinIn/></a>
+                       <a href="https://www.linkedin.com/in/rajat-soni7205/"><FaLinkedinIn/></a>
+                       <a href="https://github.com/Rajatsoni111"><FaGithub/></a>
                         </div>
-                        <button className='mt-6 border-[1px] rounded-sm p-3 gap-4 flex items-center' >Lerne More<LuExternalLink/></button>
+                        <button className='mt-6 border-[1px] rounded-sm p-3 gap-4 flex items-center' >
+                           {/* <a href="FullAbout"> Lerne More<LuExternalLink/></a> */}
+                           <Link to="/fullAbout">Lerne More<LuExternalLink/></Link>
+                           </button>
                 </div>
                 <div className="about-image">
                     <div className='img-back'></div>

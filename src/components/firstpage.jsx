@@ -9,6 +9,7 @@ import { Bloom, EffectComposer, ToneMapping } from '@react-three/postprocessing'
 import { useState } from 'react';
 import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { motion, useAnimation } from 'framer-motion';
 
 function Firstpage() {
     gsap.registerPlugin(ScrollTrigger);
@@ -25,8 +26,14 @@ function Firstpage() {
 
         })
     })
+const cards = [useAnimation(),useAnimation(),useAnimation(),useAnimation(),useAnimation(),useAnimation(),useAnimation(),useAnimation(),useAnimation(),useAnimation()]
+const onHoverStart =(index)=>{
+    cards[index].start({scale:0.5, duration:1})
+    }
 
-
+const onHoverEnd =(index)=>{
+cards[index].start({scale:1,  duration:1})
+}
     return (
         <div data-scroll data-scroll-section data-scroll-speed="-.4"
             id='loading-page' className=' w-full h-full text-white' >
@@ -34,7 +41,7 @@ function Firstpage() {
                 <div className="upper-div flex  items-center w-[100%] h-full border-1 border-indigo-50 " >
                     <div className='div'>
                         {"RAJAT SONI".split("").map((item, index) => {
-                            return <div className='name-1'><p className=' text-9xl'>{item}</p></div>
+                            return <div className='name-1'><motion.p onHoverStart={()=>onHoverStart(index)} onHoverEnd={()=>onHoverEnd(index)} initial={{scale:1}} animate={cards[index]} className='name-1-p'>{item}</motion.p></div>
                         })}
                     </div>
                     <div className='div-1'>

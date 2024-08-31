@@ -21,13 +21,16 @@
     align-items: center;
     justify-content: center;
     gap: 2%;
+    
     overflow: hidden;
     /* border: blue solid; */
 }
 .div-1{
     display: none;
 }
-
+.name-1-p{
+    font-size: 31vh;
+}
 .lower-div{
     width: 100%;
     height: 20%;
@@ -72,7 +75,7 @@
     transform: translateY(100%);
     /* border: blue solid; */
 }
-.name-1 p{
+.name-1-1 {
     padding: 0;
     margin: 0;
     font-size: 25vh;

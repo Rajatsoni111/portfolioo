@@ -7,12 +7,13 @@ function Skills() {
 useEffect(()=>{
     gsap.to('.progressbar-1',{
         x:0,
-        stagger:0.5,
+        stagger:0.2,
         duration:1,
         scrollTrigger:{
             trigger:'.progressbar-1',
-            start:"Top 70%",
-            end:"Bottom 60%"
+            start:"Top 90%",
+            end:"Bottom 60%",
+            scrub:true
         }
     })
 })
