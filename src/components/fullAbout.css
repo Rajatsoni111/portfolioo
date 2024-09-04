@@ -1,17 +1,56 @@
 .fullAbout{
-    position: sticky;
+    position: relative;
+    /* border: white solid; */
+    width: 100%;
     top: 0;
+    overflow: hidden;
+    /* background: black; */
+    color:rgb(75, 75, 75);
 }
+
  .back{
-  
    height: 90%;
    z-index: 999;
    position: relative;
    overflow: hidden;
  }
- .fullAbout{
-    color: black;
+ .cir1, .cir2,.cir3,.cir4{
+    animation: cir1 8s infinite;
+    width: 60%;
+    height:100%;
+    background: #87AAAA;
+    filter: blur(100px);
+    border-radius: 50%;
+    position: absolute;
  }
+ .cir1{
+    transform: translate(-50%,-50%);
+ }
+ @keyframes cir1 {
+    0%{width: 60%;
+        height:100%;}
+    50%{width: 0%;
+        height:0%;}
+    100%{width: 60%;
+        height:100%;}
+ }
+ .cir2{
+    right: 0;
+    bottom: 0;
+    transform: translate(50%,50%);
+ }
+ .cir3{
+    z-index: -1;
+    bottom: 0;
+    transform: translate(-50%,50%);
+ }
+.cir4{
+    right: 0;
+    z-index: -1;
+    top: 0;
+    transform: translate(50%,-50%);
+
+}
 .fullAbout .text{
     margin: 0;
     padding: 0;
@@ -21,13 +60,14 @@
     /* border: red solid; */
 }
 .fullAbout .hr{
-        border: 2px solid black;
-        height: 100%;
+        border: 2px solid #4b4b4b;
+        height: 94%;
         position: absolute;
         display: flex;
         flex-direction: column;
         align-items: center;
         /* gap: 20%; */
+        top: 0;
         left: 50%;
         transform: translateY(-120%);
 }
@@ -69,14 +109,86 @@
     top: 70%;
     left: 10%;
 }
-.college h1{
+.college h1,.Diploma h1,.school h1{
     font-size:6vh;
 }
-.Diploma h1{
-    font-size: 6vh;
+
+.experience{
+    position: relative;
+    /* border: blue solid; */
+    height: 100%;
+    /* overflow: hidden; */
+    background: transparent;
+    /* color: white; */
+    color:rgb(75, 75, 75);
 }
-.school h1{
-    font-size: 6vh;
+.experience .ex-text{
+    font-size: 30vh;
+    transform: translateX(100%);
+    /* color: rgb(94, 0, 0); */
+    color: #87AAAA;
+}
+.company-text{
+    font-size: 8vh;
+}
+.exp-project{
+    width:40%;
+    height: 50%;
+    display: flex;
+    /* border: black solid; */
+    align-items: center;
+    justify-content: space-evenly;
+    /* border: red solid; */
+}
+.about-company{
+    width: 100%;
+    /* border: black solid; */
+ display: flex;
+ margin-top: 3%;
+}
+.intern-abt h1{
+    font-size: 3vh;
+}
+.intern-abt{
+    padding-left: 1rem;
+    width: 60%;
+    height: 100%;
+    /* border: red solid; */
+}
+
+.calculator, .notes-hub{
+    width: 30%;
+    height: 70%;
+    border-radius: 20px  ;
+    border: black solid;
+    /* background: black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    /* opacity: 0; */
+}
+.calculator:hover, .notes-hub:hover{
+    scale: 1.2;
+    transition: 0.5s;
+
+}
+
+.calculator h1, .calculator h1{
+    /* color: white; */
+    color:rgb(75, 75, 75);
+
+}
+.calculator img, .notes-hub img{
+    width: 60%;
+}
+.calculator button, .notes-hub button{
+    margin-top: 10%;
+    /* color: white; */
+    color:#4b4b4b;
+    padding:5px 10px ;
+    border:1px #4b4b4b solid;
 }
 @media screen and (max-width: 700px) {
     .college, .school{
@@ -104,5 +216,28 @@
     }
     .school h1{
         font-size: 3vh;
+    }
+    
+    .experience .ex-text{
+        font-size: 10vh;
+        transform: translateX(100%);
+    }
+    .company-text{
+        font-size: 5vh;
+    }
+    .exp-project{
+        margin-top: 10%;
+        width:100%;   
+        height: 50%;
+    }
+    .calculator, .notes-hub{
+        width: 30%;
+        height: 60%;
+    }
+    .about-company{
+     flex-direction: column;
+    }
+    .intern-abt{
+        width: 100%;
     }
 }

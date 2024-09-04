@@ -16,7 +16,7 @@ function Project() {
 
     return (
         <div  className='project'>
-            <div className='discription text-red-900'>
+            <div className='discription '>
                 <p>Projects</p>
             </div>
             <div className='projects'>

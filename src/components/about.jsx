@@ -7,7 +7,7 @@ import { color } from 'framer-motion';
 import gsap from 'gsap';
 import { Link, NavLink } from 'react-router-dom';
 
-function About() {
+function About({props},ref) {
 
     useEffect(()=>{
         gsap.to(".tag-name",{
@@ -25,7 +25,7 @@ function About() {
    
     return (
         <div data-scroll data-scroll-section data-scroll-speed="-.08"
-        className='about w-full h-screen'>
+        className='about w-full h-screen' ref={ref}>
             <div className='tag flex gap-4 justify-center overflow-hidden'>
                 {"who i am".split("").map((item,index)=>{
                 return <h1 className='tag-name'>{item}</h1>
@@ -40,9 +40,9 @@ function About() {
                        <a href="https://www.linkedin.com/in/rajat-soni7205/"><FaLinkedinIn/></a>
                        <a href="https://github.com/Rajatsoni111"><FaGithub/></a>
                         </div>
-                        <button className='mt-6 border-[1px] rounded-sm p-3 gap-4 flex items-center' >
+                        <button className='mt-6 border-[1px] border-[#4b4b4b] rounded-sm p-3 gap-4 flex items-center' >
                            {/* <a href="FullAbout"> Lerne More<LuExternalLink/></a> */}
-                           <Link to="/fullAbout">Lerne More<LuExternalLink/></Link>
+                           <NavLink to="/about" style={{display:"flex", alignItems:"center", gap:"10px"}}>Lerne More<LuExternalLink/></NavLink>
                            </button>
                 </div>
                 <div className="about-image">
@@ -54,4 +54,4 @@ function About() {
     )
 }
 
-export default About
+export default React.forwardRef(About)

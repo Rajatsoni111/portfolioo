@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html,body,#root{
-  background-color: black;
+  /* background-color: black; */
   width: 100%;
   height: 100dvh;
   margin: 0;
@@ -13,4 +13,7 @@ html,body,#root{
 }
 ::-webkit-scrollbar{
   display: none;
+  /* color: brown; */
+  /* background: #000; */
+  /* caret-color: blueviolet; */
 }

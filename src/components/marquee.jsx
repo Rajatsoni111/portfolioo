@@ -5,7 +5,7 @@ import {motion} from "framer-motion"
 function Marquee() {
   return (
     <div data-scroll data-scroll-section data-scroll-speed="-.01"
-    className=' w-full flex rounded-t-3xl items-center h-[35%] bg-red-950 overflow-hidden' >
+    className='marque w-full flex rounded-t-3xl items-center h-[35%] overflow-hidden' >
         <div  className='flex border-t-[1px] border-b-[1px] h-[70%] text-4xl'>
         <motion.div initial={{x:"0"}} animate={{x:"-100%"}} transition={{repeat: Infinity, ease: "linear", duration:10}}  className='flex w-full  items-center whitespace-nowrap'>
           <p className='ml-2 text-white leading-none uppercase text-9xl'>React</p>

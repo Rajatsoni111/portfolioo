@@ -6,7 +6,8 @@
     align-items: center;
     justify-content: center;
     /* background: rgb(164, 164, 164); */
-    background: rgb(91, 2, 2);
+    /* background: rgb(91, 2, 2); */
+    background: #87AAAA;
     /* z-index: -2; */
     overflow: hidden;
 }
@@ -20,7 +21,9 @@
     justify-content: center;
     gap: 5rem;
     /* margin-top: 5%; */
-    background: rgb(91, 2, 2);
+    /* background: rgb(91, 2, 2); */
+    background: #87AAAA;
+
 }
 .eye-boll{
     display: flex;

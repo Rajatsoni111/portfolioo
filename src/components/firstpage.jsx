@@ -11,7 +11,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { motion, useAnimation } from 'framer-motion';
 
-function Firstpage() {
+function Firstpage({props}, ref) {
     gsap.registerPlugin(ScrollTrigger);
 
     // const split = SplitText.create("#detail", {type: "chars"})
@@ -28,15 +28,15 @@ function Firstpage() {
     })
 const cards = [useAnimation(),useAnimation(),useAnimation(),useAnimation(),useAnimation(),useAnimation(),useAnimation(),useAnimation(),useAnimation(),useAnimation()]
 const onHoverStart =(index)=>{
-    cards[index].start({scale:0.5, duration:1})
+    cards[index].start({scale:0.5, duration:0.5})
     }
 
 const onHoverEnd =(index)=>{
-cards[index].start({scale:1,  duration:1})
+cards[index].start({scale:1,  duration:0.5})
 }
     return (
         <div data-scroll data-scroll-section data-scroll-speed="-.4"
-            id='loading-page' className=' w-full h-full text-white' >
+            id='loading-page' className=' w-full h-full ' ref={ref} >
             <div className=" flex w-full h-[80%]  item-center" >
                 <div className="upper-div flex  items-center w-[100%] h-full border-1 border-indigo-50 " >
                     <div className='div'>
@@ -67,8 +67,8 @@ cards[index].start({scale:1,  duration:1})
                 </Canvas>
             </div> */}
             </div>
-            <div className=" h-[20%]  bg-zinc-900 ">
-                <div className=" flex justify-around border-t-[1px] ">
+            <div className=" h-[20%]  bg-[#4b4b4b] text-white">
+                <div className=" flex justify-around border-t-[1px] border-black">
                     {["Web Developer", "Web Designer"].map((item, index) => {
                         return <div className='mt-2'><p>{item}</p></div>
                     })}
@@ -80,4 +80,4 @@ cards[index].start({scale:1,  duration:1})
     )
 }
 
-export default Firstpage
+export default React.forwardRef(Firstpage)
