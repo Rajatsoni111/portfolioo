@@ -22,18 +22,95 @@
 }
 .navbar ul li{
     list-style: none;
+    cursor: pointer;
+    transition: 0.5s;
 }
+.navbar ul li:hover{
+    color: #87AAAA;
+}
+
+.hidebar{
+    display: none;
+}
+.menu{
+    display: none;
+}
+.menuClose{
+    display: none;
+}
+
 
 @media screen and (max-width: 700px) {
     .navbar{padding: 0px 2rem;
-    border: blue solid;} 
+        align-items: center;
+    /* border: blue solid;s */
+} 
     .navbar ul{
-        display: block;
-        border: red solid;
+        background: white;
+        flex-direction: column;
+        /* border: red solid; */
         position: absolute;
-        right: 0;
+        right: -100%;
         top:100%;
-        height: 100%;
+        width: 30%;
+        height: 100dvh;
         z-index: 999;
+        align-items: center;
+        transition: 0.5s;
+    }
+    .hidebar{
+        display: block;
+        width: 30px;
+        height: 30px;
+        /* border: black solid; */
+        
+    }
+    .menu{
+        display: flex;
+        flex-direction: column;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        /* border: black solid; */
+    }
+    .menuClose{
+        display: none;
+        flex-direction: column;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+
+        /* border: black solid; */
+    }
+    .menuClose .hrClose{
+        margin-top: 20%;
+        width: 100%;
+        border:2px black solid;
+        transform: rotateZ(45deg);
+        position: absolute;
+        /* background: black; */
+    }
+    .menuClose .hrClose3{
+        margin-top: 20%;
+        transform: rotateZ(-45deg);
+        width: 100%;
+        position: absolute;
+        border:2px black solid;
+        /* background: black; */
+    }
+    .menu .hr{
+        border:2px black solid;
+        /* background: black; */
+    }
+    
+    .menu .hr2{
+        width: 50%;
+        margin-top: 20%;
+        border:2px black solid;
+    }
+    
+    .menu .hr3{
+        margin-top: 20%;
+        border:2px black solid;
     }
 }

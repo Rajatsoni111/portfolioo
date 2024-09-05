@@ -19,7 +19,7 @@ function Skills({ props }, ref) {
     })
 
     return (
-        <div className='w-full h-screen skills' ref={ref}>
+        <div data-scroll data-scroll-speed="-0.01" className='w-full h-screen skills' ref={ref}>
             <div className='skills-text'>
                 <h1>skills</h1>
             </div>

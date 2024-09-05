@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import './fullAbout.css'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { motion } from 'framer-motion'
+import Navbar from './navbar'
 
 function FullAbout() {
     gsap.registerPlugin(ScrollTrigger)
@@ -66,6 +67,7 @@ function FullAbout() {
     })
     return (
         <>
+        {/* <Navbar/> */}
             <div className='fullAbout w-full h-screen bg-white'>
                 <div className="cir1"></div>
                 <div className="cir2"></div>
