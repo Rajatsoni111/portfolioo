@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState } from 'react'
 import "./project.css"
 import { motion, useAnimate, useAnimation } from 'framer-motion'

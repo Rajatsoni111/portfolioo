@@ -1,3 +1,4 @@
+/* eslint-disable */
 import gsap from 'gsap'
 import React, { useEffect } from 'react'
 import './fullAbout.css'

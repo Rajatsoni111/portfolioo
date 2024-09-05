@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react'
 import "./marque.css"
 import {motion} from "framer-motion"

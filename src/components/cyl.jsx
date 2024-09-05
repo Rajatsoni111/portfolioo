@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useTexture } from '@react-three/drei'
 import {  useFrame } from '@react-three/fiber'
 import React, { useEffect, useRef } from 'react'

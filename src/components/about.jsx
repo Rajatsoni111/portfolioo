@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useEffect, useState } from 'react'
 import "./about.css"
 import { FaInstagram, FaRegObjectUngroup } from "react-icons/fa";

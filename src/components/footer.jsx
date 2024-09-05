@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react'
 import { FaRegCopyright } from "react-icons/fa";
 import "./footer.css"

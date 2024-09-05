@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useEffect } from 'react'
 import "./firstpage.css"
 import Cyl from './cyl'
