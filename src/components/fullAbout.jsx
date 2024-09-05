@@ -5,14 +5,22 @@ import './fullAbout.css'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { motion } from 'framer-motion'
 import Navbar from './navbar'
+import { IoIosCloudDownload } from "react-icons/io";
+
 
 function FullAbout() {
     gsap.registerPlugin(ScrollTrigger)
     useEffect(() => {
         gsap.to(".text", {
             y: 0,
-            duration: 0.5,
-            stagger: 0.2
+            duration: 1,
+            stagger: 0.5,
+            scrollTrigger:{
+                trigger:".fullAbout",
+                start:"top 100%",
+                end:"bottom 100%",
+                scrub:true
+            }
         })
 
         gsap.to(".college", {
@@ -44,38 +52,46 @@ function FullAbout() {
         })
         gsap.to(".ex-text", {
             x: 0,
-            duration: 1,
-            stagger: 1,
+            duration: 0.2,
+            stagger: 0.5,
             scrollTrigger: {
-                trigger: "experience",
-                start: "top 50%",
-                end: "bottom 50%",
+                trigger: ".experience",
+                start: "top 100%",
+                end: "bottom 100%",
                 scrub: true
             }
         })
-        // gsap.to(".calculator", {
-        //      x: 0,
-        //     opacity:0,
-        //     duration: 10,
-        //     stagger: 0.5,
-        //     scrollTrigger: {
-        //         trigger: "experience",
-        //         start: "top 10%",
-        //         end: "bottom 80%",
-        //         scrub: true
-        //     }
-        // })
+        gsap.to('.minitext', {
+            //  rotateX: "360deg",
+            color:"black",
+            duration: 1,
+            ease:"power3.inOut",
+            repeat:Infinity,
+            stagger: 0.5
+            // delay:5
+        })
     })
     return (
         <>
         {/* <Navbar/> */}
+        <div className="me w-full h-screen">
+            <div className='me-image'>
+                <img src="my-image1.png" alt="" />
+            </div>
+            <div className='me-text'>
+                {["Hi,There"].map((item,index)=>{
+                    return <h1 className='me-text-h1'>{item}</h1>
+                })}
+                  <p className='text-2xl mt-10 ' id='detail'>I am <span className='minitext text-4xl text-[#87AAAA]'> Rajat Soni</span>, I'm Front end developer or Motivated web designer with a passion for crafting beautiful, <span className='minitext text-4xl text-[#87AAAA]'>user-friendly</span> websites. Skilled in HTML, CSS, JavaScript, <span className='minitext text-4xl text-[#87AAAA]'>React</span> and design tools (Photoshop, Sketch). Eager to contribute to impactful projects and grow my <span className='minitext text-4xl text-[#87AAAA]'>design career</span>.</p>
+                <a href="../rajat-soni.pdf" download="resume">
+                <button >Download CV <IoIosCloudDownload/></button></a>
+            </div>
+        </div>
             <div className='fullAbout w-full h-screen bg-white'>
                 <div className="cir1"></div>
                 <div className="cir2"></div>
-
-                {/* <div className="main-content"> */}
                 <div className=' w-full h-min flex justify-center overflow-hidden'>
-                    {"Hi,There".split("").map((item, index) => {
+                    {"STUDY".split("").map((item, index) => {
                         return <h1 className='text'>{item}</h1>
                     })}
                     {/* <span className='hi text-white text-6xl '>Hi, There</span> */}
@@ -107,8 +123,6 @@ function FullAbout() {
                         </div>
                     </div>
                 </div>
-
-                {/* </div> */}
             </div>
             <div className='experience w-full h-screen bg-white overflow-hidden'>
                 <div className="cir3"></div>

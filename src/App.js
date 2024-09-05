@@ -15,6 +15,7 @@ import Navbar from './components/navbar';
 // import FullAbout from './components/fullAbout';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import FullAbout from './components/fullAbout';
+import ScrollToTop from './components/scrollTop';
 
 function App() {
   const locomotiveScroll = new LocomotiveScroll();
@@ -22,6 +23,7 @@ function App() {
 
     <>
       <BrowserRouter>
+      <ScrollToTop/>
         {/* <Navbar /> */}
         <Routes>
           <Route path='/' Component={Navbar}/>

@@ -1,3 +1,33 @@
+.me{
+    display: flex;
+}
+.me .me-image{
+    width: 50%;
+    height: 100%;
+    /* border: red solid; */
+}
+.me .me-text{
+    width: 50%;
+    height: 100%;
+    /* border: blue solid; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.me .me-text h1{
+    font-size: 15vh;
+    color: #87AAAA;
+}
+.me .me-text button{
+    margin-top: 5%;
+    padding: 10px;
+    border:1px black solid;
+    font-size: 3vh;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 .fullAbout{
     position: relative;
     /* border: white solid; */
@@ -54,7 +84,8 @@
 .fullAbout .text{
     margin: 0;
     padding: 0;
-    font-size: 10vh;
+    font-size: 15vh;
+    color: #87AAAA;
     /* color: white; */
     transform: translateY(100%);
     /* border: red solid; */
@@ -82,7 +113,7 @@
     align-items: start;
     gap: 10px;
     position: absolute;
-    top: 10%;
+    /* top: 10%; */
     left: 10%;
 }
 .college img, .Diploma img, .school img{
@@ -97,7 +128,7 @@
     gap: 10px;
     position: absolute;
     float: right;
-    top: 35%;
+    top: 25%;
     right: 9%;
 }
 .school{
@@ -106,7 +137,7 @@
     gap: 10px;
     position: absolute;
     float: right;
-    top: 70%;
+    top: 60%;
     left: 10%;
 }
 .college h1,.Diploma h1,.school h1{
