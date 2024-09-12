@@ -41,7 +41,7 @@ function Project() {
                     
                 </div>
                 <div  className='project-name'>
-                    {"Blogger".split("").map((item,index)=>{
+                    {"Blogy-Duniya".split("").map((item,index)=>{
                         return <motion.h1 initial={{y:"100%"}} animate={cards[1]} transition={{ease: [0.22, 1, 0.36,1], delay: index*.06}}>{item}</motion.h1>
                     })}
                 </div>
